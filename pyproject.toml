@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools", "setuptools-scm"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "allspark"
+requires-python = ">3.10.0"
+authors = [
+    {name = "Priyatham Kattakinda", email = "priyathamkat@gmail.com"},
+]
+dynamic = ["version"]
+description = "An implementation of `transformers` and related methods in PyTorch from the ground up."
+readme = "README.md"
+dependencies = [
+    "tensorboard",
+    "torch",
+    "torchvision",
+]
+
+[tool.setuptools]
+include-package-data = true
