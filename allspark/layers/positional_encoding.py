@@ -8,10 +8,9 @@ class PositionalEncoding(nn.Module):
 
         positions = torch.arange(max_seq_len).unsqueeze(-1)
 
-        dimensions = 2 * torch.arange((d_model + 1) // 2)
-        dimensions = dimensions.unsqueeze(0)
-
+        dimensions = 2 * torch.arange((d_model + 1) // 2).unsqueeze(0)
         frequencies = 1 / (10000 ** (dimensions / d_model))
+        
         arguments = positions * frequencies
 
         positional_encoding = torch.zeros(max_seq_len, d_model)
