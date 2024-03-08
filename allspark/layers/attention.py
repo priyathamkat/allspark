@@ -24,7 +24,7 @@ class ScaledDotProductAttention(nn.Module):
     Note that d_v shoud be equal to d when chaining multiple attention layers.
     """
 
-    def __init__(self, is_causal: bool = False, dropout: float = 0.0):
+    def __init__(self, is_causal: bool = False, dropout: float = 0.0) -> None:
         super().__init__()
         self.is_causal = is_causal
         self.dropout = nn.Dropout(p=dropout)
